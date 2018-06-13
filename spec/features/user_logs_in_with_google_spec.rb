@@ -11,7 +11,7 @@ describe 'User' do
     expect(page).to have_content('Kelly Schroeder')
     expect(page).to have_link('Log Out')
   end
-  it 'logs out' do
+  xit 'logs out' do
     stub_omniauth
 
     visit '/'
