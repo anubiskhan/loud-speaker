@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'User', js: true do
   describe 'creates a custom map' do
-    it 'adds a map to the DB' do
+    it 'creates current map without saving to DB' do
       visit new_map_path
 
       expect(Map.all.count).to eq(0)
