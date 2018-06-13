@@ -10,6 +10,9 @@ describe 'User' do
     click_on 'Log In'
 
     expect(page).to have_content('Kelly Schroeder')
+
+    find('#navbarDropdown').click
+
     expect(page).to have_link('Log Out')
   end
   it 'logs out' do

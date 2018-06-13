@@ -9,6 +9,7 @@ describe 'User', js: true do
 
       click_on 'Use This Map'
       sleep 2
+
       expect(Map.all.count).to eq(0)
       expect(current_path).to eq(new_order_path)
     end
