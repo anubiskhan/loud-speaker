@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  validates_presence_of :name, :email, :role, :google_auth_token
+  validates_presence_of :name, :email, :google_auth_token
   validates_uniqueness_of :email
 
   def self.update_or_create(auth)
