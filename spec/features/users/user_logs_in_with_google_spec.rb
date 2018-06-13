@@ -18,6 +18,9 @@ describe 'User' do
     visit '/'
 
     click_on 'Log In'
+
+    find('#navbarDropdown').click
+
     click_on 'Log Out'
 
     expect(page).to_not have_content('Kelly Schroeder')
