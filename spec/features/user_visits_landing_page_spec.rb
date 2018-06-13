@@ -7,7 +7,7 @@ describe 'User' do
 
       expect(page).to have_css('.navbar')
     end
-    xit 'sees an image carousel and link to create a map' do
+    it 'sees an image carousel and link to create a map' do
       visit '/'
 
       expect(page).to have_content('Custom Laser Cut Maps!')
