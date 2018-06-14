@@ -50,6 +50,7 @@ group :development, :test do
   gem 'faker'
   gem 'launchy'
   gem 'pry'
+  gem 'pry-state'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'simplecov'
