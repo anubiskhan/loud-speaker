@@ -4,20 +4,20 @@ class CoinPricePresenter
     @body = service.body
   end
 
-  def ripple
-    { price: @body[:data][:'52'][:quotes][:USD][:price], symbol: @body[:data][:'52'][:symbol] }
+  def ripple_price
+    @body[:data][:'52'][:quotes][:USD][:price]
   end
 
-  def bitcoin
-    { price: @body[:data][:'1'][:quotes][:USD][:price], symbol: @body[:data][:'1'][:symbol] }
+  def bitcoin_price
+    @body[:data][:'1'][:quotes][:USD][:price]
   end
 
-  def stellar
-    { price: @body[:data][:'512'][:quotes][:USD][:price], symbol: @body[:data][:'512'][:symbol] }
+  def stellar_price
+    @body[:data][:'512'][:quotes][:USD][:price]
   end
 
-  def ethereum
-    { price: @body[:data][:'1027'][:quotes][:USD][:price], symbol: @body[:data][:'1027'][:symbol]}
+  def ethereum_price
+    @body[:data][:'1027'][:quotes][:USD][:price]
   end
 
 end
