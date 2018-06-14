@@ -5,11 +5,10 @@ describe CoinPricePresenter do
     it 'returns only the information desired' do
       presenter = CoinPricePresenter.new
 
-      expect(presenter.ripple.keys).to eq([:price, :symbol])
-      expect(presenter.ripple[:symbol]).to eq('XRP')
-      expect(presenter.bitcoin.keys).to eq([:price, :symbol])
-      expect(presenter.stellar.keys).to eq([:price, :symbol])
-      expect(presenter.ethereum.keys).to eq([:price, :symbol])
+      expect(presenter.ethereum_price).to be_instance_of(Float)
+      expect(presenter.ripple_price).to be_instance_of(Float)
+      expect(presenter.bitcoin_price).to be_instance_of(Float)
+      expect(presenter.stellar_price).to be_instance_of(Float)
     end
   end
 end
