@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'User' do
   describe 'on new order' do
-    it 'shows no map if they have not selected one' do
+    xit 'shows no map if they have not selected one' do
       visit new_order_path
 
       expect(page).to have_content("You've got to pick a map first!")
