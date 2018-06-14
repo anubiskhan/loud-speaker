@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Coin Price Service' do
+describe CoinPriceService do
   describe 'pings CoinMarketCaps api' do
     it 'returns a current price' do
       service = CoinPriceService.new
