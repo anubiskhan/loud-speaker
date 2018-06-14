@@ -2,9 +2,10 @@ class Api::V1::MapsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def create
-    map = Map.new(map_params)
-    session[:map] = map.id
-    map.create_static
+    session[:map] = map_params
+    # @current_map = current_map
+    # @current_map.assign_attributes(map_params)
+    # @current_map.create_static
     render js: "window.location = '#{new_order_path}'"
   end
 

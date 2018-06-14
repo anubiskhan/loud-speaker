@@ -1,0 +1,12 @@
+<h3>Your map will be the Colorado Flag overlaid on this map</h3>
+<div class="flex-container">
+  <div>
+    <% if current_map %>
+      <%= button_to 'Order This' %>
+      <img class="map-image" src="<%= current_map['static_url'] %>" alt="">
+    <% else %>
+      <h2>You've got to pick a map first!</h2>
+    <% end %>
+
+  </div>
+</div>
