@@ -1,14 +1,27 @@
 <ul>
   <li>
-    XRP price: <%= number_to_currency(@coin_presenter.ripple_price) %>
+    XRP price:
+    <%= number_to_currency(@coin_presenter.ripple_price) %>
   </li>
   <li>
-    BTC price: <%= number_to_currency(@coin_presenter.bitcoin_price) %>
+    BTC price:
+    <%= number_to_currency(@coin_presenter.bitcoin_price) %>
   </li>
   <li>
-    XLM price: <%= number_to_currency(@coin_presenter.stellar_price) %>
+    XLM price:
+    <%= number_to_currency(@coin_presenter.stellar_price) %>
   </li>
   <li>
-    ETH price: <%= number_to_currency(@coin_presenter.ethereum_price) %>
+    ETH price:
+    <%= number_to_currency(@coin_presenter.ethereum_price) %>
   </li>
 </ul>
+
+<% if @cart.contents.empty? %>
+    <h3>There is nothing in your cart</h3>
+<% else %>
+  <h2>Your cart contains:</h2>
+  <% @products.each do |product| %>
+    <%= product.name %> <%= number_to_currency(product.price) %>
+  <% end %>
+<% end %>

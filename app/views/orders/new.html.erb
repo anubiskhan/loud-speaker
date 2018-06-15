@@ -2,7 +2,7 @@
 <div class="flex-container">
   <div>
     <% if current_map %>
-      <%= button_to 'Order This' %>
+      <%= button_to 'Order This', cart_path(product_id: 1) %>
       <img class="map-image" src="<%= current_map['static_url'] %>" alt="">
     <% else %>
       <h2>You've got to pick a map first!</h2>
