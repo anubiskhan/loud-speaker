@@ -4,6 +4,7 @@ describe 'User' do
   describe 'has selected a map' do
     it 'and sees it displayed in cart' do
       Product.create!(
+        id: 1,
         name: 'Custom Map',
         description: 'Pick the location and zoom of your own map!',
         price: 39,
