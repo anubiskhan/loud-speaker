@@ -7,7 +7,7 @@ describe Cart do
         cart = Cart.new({})
         cart.add_product(1)
 
-        expect(cart.list).to eq({'1' => 1})
+        expect(cart.contents).to eq({'1' => 1})
       end
     end
   end
