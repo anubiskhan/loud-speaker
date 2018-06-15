@@ -7,8 +7,4 @@ describe Product do
     it { should validate_presence_of(:description) }
     it { should validate_presence_of(:price) }
   end
-  describe 'relationships' do
-    it { should have_many(:product_orders) }
-    it { should have_many(:orders).through(:product_orders) }
-  end
 end
