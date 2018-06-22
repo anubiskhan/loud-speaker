@@ -24,4 +24,21 @@
   <% @products.each do |product| %>
     <%= product.name %> <%= number_to_currency(product.price) %>
   <% end %>
+  <p>Total:
+    <%= number_to_currency(@cart.total_price) %></p>
+  <%= form_tag purchases_path do %>
+  <%= hidden_field_tag "cost", @cart.total_price %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>" data-description="A Map Which Cannot Be Believed" data-amount="<%= @cart.total_price * 100 %>" data-locale="auto"></script>
+
+  <% end %>
+
 <% end %>

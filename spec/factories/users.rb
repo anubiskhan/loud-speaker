@@ -5,6 +5,6 @@ FactoryBot.define do
       "#{Faker::Internet.email}#{n}"
     end
     role 0
-    google_sso_token SecureRandom.urlsafe_base64
+    google_auth_token SecureRandom.urlsafe_base64
   end
 end

@@ -12,4 +12,10 @@ class Cart
       contents[id.to_s] += 1
     end
   end
+
+  def total_price
+    contents.map do |product_id, quantity|
+      Product.find(product_id).price * quantity
+    end.sum
+  end
 end
