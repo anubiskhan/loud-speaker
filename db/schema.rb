@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_15_144536) do
+ActiveRecord::Schema.define(version: 2018_06_22_010335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,24 @@ ActiveRecord::Schema.define(version: 2018_06_15_144536) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "purchase_products", force: :cascade do |t|
+    t.integer "quantity"
+    t.decimal "sale_price", precision: 10, scale: 2
+    t.bigint "map_id"
+    t.bigint "purchase_id"
+    t.bigint "product_id"
+    t.index ["map_id"], name: "index_purchase_products_on_map_id"
+    t.index ["product_id"], name: "index_purchase_products_on_product_id"
+    t.index ["purchase_id"], name: "index_purchase_products_on_purchase_id"
+  end
+
+  create_table "purchases", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_purchases_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -40,4 +58,8 @@ ActiveRecord::Schema.define(version: 2018_06_15_144536) do
     t.text "google_auth_token"
   end
 
+  add_foreign_key "purchase_products", "maps"
+  add_foreign_key "purchase_products", "products"
+  add_foreign_key "purchase_products", "purchases"
+  add_foreign_key "purchases", "users"
 end

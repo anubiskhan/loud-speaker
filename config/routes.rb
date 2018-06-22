@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get :logout, to: 'sessions#destroy'
   get '/cart', to: 'cart#show'
   resources :maps, only: [:new]
+  resources :purchases, only: [:create, :show]
   resources :orders, only: [:new]
   resources :cart, only: [:create]
 

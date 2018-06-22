@@ -1,0 +1,4 @@
+<% render file: 'public/404' if current_user.nil? || current_user.id == @purchase.user_id %>
+<h1><%= current_user['name'] %></h1>
+<h2>Your order from <%= @purchase.created_at %></h2>
+<img src="<%= @map.static_url %>" alt="">
