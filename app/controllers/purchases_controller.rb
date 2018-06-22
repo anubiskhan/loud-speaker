@@ -40,6 +40,7 @@ class PurchasesController < ApplicationController
         purchase_id: @purchase.id,
         product_id: product_id
       )
+      PurchaseConfirmationMailer.purchase_mailer(current_user).deliver_now
       session.delete(:cart)
       redirect_to purchase_path(@purchase)
     end
