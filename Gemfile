@@ -35,13 +35,14 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'aws-sdk', '~> 2'
 gem 'faraday'
 gem 'figaro'
+gem 'newrelic_rpm'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-oauth2', '~> 1.5.0'
-gem 'stripe'
 gem 'redis-rails'
-gem 'newrelic_rpm'
+gem 'stripe'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
