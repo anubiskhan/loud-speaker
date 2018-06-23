@@ -35,9 +35,11 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem "asset_sync"
 gem 'aws-sdk', '~> 2'
 gem 'faraday'
 gem 'figaro'
+gem "fog-aws"
 gem 'newrelic_rpm'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-oauth2', '~> 1.5.0'
