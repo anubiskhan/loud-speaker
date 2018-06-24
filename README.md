@@ -1,6 +1,26 @@
 # Loud Speaker
 
-This project is an e-commerce website that will provide consumers with custom designed art and apparel. The original offering will be laser-cut wood maps with state flags laid over top. The main achievement is an interactive map for users to locate the exact position and zoom of a map they would like to have turned into art, and then creates and saves a static image of that map to be handled.
+This project is an e-commerce website that will provide consumers with custom designed art and apparel. The original offering will be laser-cut wood maps with state flags laid over top.
+
+Users are able to oauth in via their Google credentials for ease of use.
+
+![Logging in via Google oauth](app/assets/gifs/loud_speaker_oauth.gif)
+
+The main achievement is an interactive map for users to locate the exact position and zoom of a map they would like to have turned into art. The map utilizes both geocoding and geolocation to enhance the user experience.
+
+![Logging in via Google oauth](app/assets/gifs/loud_speaker_custom_map.gif)
+
+It then creates and saves a static image of that map to be handled, and offers a preview of the custom map with the flag overlaid.
+
+![Logging in via Google oauth](app/assets/gifs/loud_custom_order.gif)
+
+Once a user decides they would like to purchase the product, they are able to complete a secure purchase using Stripe and taken to a receipt for the transaction.
+
+![Logging in via Google oauth](app/assets/gifs/loud_speaker_stripe_payment.gif)
+
+After a purchase is completed successfully, the user will automatically be sent a confirmation email (using the SendGrid add-on functionality provided by Heroku).
+
+![Logging in via Google oauth](app/assets/gifs/loud_speaker_automatic_mailer.gif)
 
 ## Main Technologies
 
