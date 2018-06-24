@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   resources :purchases, only: [:create, :show]
   resources :orders, only: [:new]
   resources :cart, only: [:create]
-
+  match "*path", to: "application#error_404", via: :all
 end

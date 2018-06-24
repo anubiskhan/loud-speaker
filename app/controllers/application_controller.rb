@@ -15,4 +15,8 @@ class ApplicationController < ActionController::Base
   def set_cart
     @cart ||= Cart.new(session[:cart])
   end
+
+  def error_404
+    render file: '/public/404', status: 404
+  end
 end
