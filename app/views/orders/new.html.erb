@@ -1,12 +1,19 @@
-<h3>Your map will be the Colorado Flag overlaid on this map</h3>
-<div class="flex-container">
-  <div>
-    <% if current_map %>
-      <%= button_to 'Order This', cart_path(product_id: 1) %>
-      <img class="map-image" src="<%= current_map['static_url'] %>" alt="">
-    <% else %>
-      <h2>You've got to pick a map first!</h2>
-    <% end %>
+<div class="mx-auto" style="width: 750px">
+  <div class="center">
+    <h3>Your map will look like this!</h3>
+    <div class="flex-container">
+      <div>
+        <% if current_map %>
+          <%= button_to 'Order This', cart_path(product_id: 1), :class => "btn btn-primary btn-lg" %>
+          <img class="map-image" src="<%= current_map['static_url'] %>" alt="">
+          <div class="flag-image">
+            <img src="<%= image_path('Colorado-Flag.jpg') %>" alt="" height="450px" width="750px">
+          </div>
+        <% else %>
+          <h2>You've got to pick a map first!</h2>
+        <% end %>
 
+      </div>
+    </div>
   </div>
 </div>

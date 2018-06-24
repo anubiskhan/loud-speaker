@@ -2,6 +2,8 @@ class CartController < ApplicationController
   def show
     @coin_presenter = CoinPricePresenter.new
     @products = Product.where(id: @cart.contents.keys)
+    @current_map = current_map
+    @current_map.create_static
   end
 
   def create

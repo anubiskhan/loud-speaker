@@ -1,4 +1,13 @@
-<% render file: 'public/404' if current_user.nil? || current_user.id == @purchase.user_id %>
-<h1><%= current_user['name'] %></h1>
-<h2>Your order from <%= @purchase.created_at %></h2>
-<img src="<%= @map.static_url %>" alt="">
+<div class="mx-auto" style="width: 750px">
+  <div class="center">
+    <% render file: 'public/404' if current_user.nil? || current_user.id == @purchase.user_id %>
+      <h1><%= current_user['name'] %></h1>
+      <h2>Your order from
+        <%= format_date(@purchase.created_at) %></h2>
+      <h2><%= number_to_currency(@purchase.total_price) %></h2>
+      <img class="map-image" src="<%= @map.static_url %>" alt="">
+      <div class="flag-image">
+        <img src="<%= image_path('Colorado-Flag.jpg') %>" alt="" height="450px" width="750px">
+      </div>
+    </div>
+  </div>
