@@ -13,7 +13,48 @@
  *= require_tree .
  *= require_self
  */
+
 .logo-image {
- width: 75px;
- height: 45px;
+  width: 75px;
+  height: 45px;
+}
+
+.vertical-center {
+  position: relative;
+  top: 45vh;
+}
+
+.center {
+  text-align: center;
+}
+
+.crypto-border {
+  border: 2px black solid;
+  height: 5vh;
+  margin: 5px;
+  text-align: center;
+  padding-top: 1vh;
+}
+
+.flag-image {
+  height: 0px;
+  position: relative;
+  top: -450px;
+  opacity: .2;
+}
+
+.map-image {
+  width: 750px;
+  height: 450px;
+}
+
+body {
+  background-color: #66a0ff !important;
+}
+
+#myCarousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }

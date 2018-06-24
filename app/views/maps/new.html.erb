@@ -1,11 +1,16 @@
-<div class="center">
-    <input id="address" type="textbox" value="Enter Your City" onkeypress="if(event.keyCode==13)codeAddress()">
-    <input type="button" value="Encode" onclick="codeAddress()">
-</div>
-<div class="center">
-  <button id="sendMapDataButton" onclick="sendMapData()">Use This Map</button>
-</div>
-<div class="flex-container">
-  <div id="map"></div>
-  <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GMAPS_API'] %>&callback=initMap" async="async" defer="defer"></script>
+<div class="mx-auto" style="width: 750px">
+  <div class="center">
+    <div class="input-group mb-3">
+      <input id="address" type="text" class="form-control" placeholder="Enter Your City" onkeypress="if(event.keyCode==13)codeAddress()" aria-label="Enter Your City" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <input type="button" value="Locate" onclick="codeAddress()" class="btn btn-outline-secondary">
+      </div>
+    </div>
+
+    <button id="sendMapDataButton" onclick="sendMapData()" class="btn btn-primary btn-lg">Use This Map</button>
+  </div>
+  <div class="flex-container">
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GMAPS_API'] %>&callback=initMap" async="async" defer="defer"></script>
+  </div>
 </div>
