@@ -25,6 +25,8 @@ This project is an e-commerce website that will provide consumers with custom de
   - Assets automatically sync when deploying to Heroku
 * Cloudfront
   - Provides global CDN for static assets and caching
+* SendGrid
+  - Provides automatic email confirmation after a purchase is completed successfully.
 
 ### Peripheral Technologies
 
