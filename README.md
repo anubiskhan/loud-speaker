@@ -1,4 +1,4 @@
-# [Loud Speaker] (https://loud-speaker.herokuapp.com/)
+# [Loud Speaker](https://loud-speaker.herokuapp.com/)
 
 This project is an e-commerce website that will provide consumers with custom designed art and apparel. The original offering will be laser-cut wood maps with state flags laid over top.
 
